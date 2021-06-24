@@ -41,6 +41,12 @@ class InstitutionalLoginPage(BasePage):
     dropdown_options = GroupLocator(By.CSS_SELECTOR, '#institutionSelect option')
 
 
+class ForgotPasswordPage(BasePage):
+    url = settings.OSF_HOME + '/forgotpassword/'
+
+    identity = Locator(By.ID, 'forgotPasswordForm')
+
+
 def login(driver, user=settings.USER_ONE, password=settings.USER_ONE_PASSWORD):
     login_page = LoginPage(driver)
     login_page.goto()

@@ -22,3 +22,5 @@ class InstitutionsLandingPage(OSFBasePage):
 class InstitutionBrandedPage(OSFBasePage):
 
     identity = Locator(By.CSS_SELECTOR, '#fileBrowser > div.db-header.row > div.db-buttonRow.col-xs-12.col-sm-4.col-lg-3 > div > input')
+
+    projects_loading_indicator = Locator(By.CLASS_NAME, 'line-loader', settings.VERY_LONG_TIMEOUT)
